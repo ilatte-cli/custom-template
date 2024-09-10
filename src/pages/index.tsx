@@ -1,6 +1,7 @@
 import React from "react";
 import { useAtom } from "jotai";
 import commonStore from '../store/index';
+import Button from 'antd/es/button';
 
 const Index = () => {
 
@@ -8,12 +9,12 @@ const Index = () => {
 
     return (
         <>
-            <button 
+            <h1>name: {store.name}</h1>
+            <Button 
                 onClick={() => setStore((store) => ({...store, count: store.count + 1}))}
                 >click ++
-            </button>
+            </Button>
             <h1>count: {store.count}</h1>
-            <h1>name: {store.name}</h1>
         </>
     )
 }
